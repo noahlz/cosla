@@ -21,7 +21,7 @@ Cosla supports a holiday calendar (via configuration) so that weekends and holid
 
 ## Prerequsites
 
-To build, you need to install Java and [Leiningen](http://leingingen.org)
+To build, you need to install Java and [Leiningen](https://leiningen.org/)
 
 If you have a pre-built jar already, you only need Java to run with `java -jar` - no need for Leiningen. See below for instructions.
 
