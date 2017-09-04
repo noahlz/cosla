@@ -2,6 +2,8 @@
 
 Calculate SLA metrics from your JIRA project.
 
+    $ lein run -m cosla.main time-to-close
+
 ## Features
 
 Cosla is a command-line tool that extracts data into CSV reports from Jira tickets via [Jira REST API](https://developer.atlassian.com/jiradev/jira-apis/jira-rest-apis).
@@ -19,9 +21,7 @@ Cosla supports a holiday calendar (via configuration) so that weekends and holid
 
 ## Prerequsites
 
-To build, you need to install Java and Lieningen:
-
-    http://leingingen.org
+To build, you need to install Java and [Leiningen](http://leingingen.org)
 
 If you have a pre-built jar already, you only need Java to run with `java -jar` - no need for Leiningen. See below for instructions.
 
