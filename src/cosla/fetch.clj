@@ -24,7 +24,7 @@
       (jira-connect)))
   ([]
     (let [{:keys [jira-url username config-password]} *config*
-          password (if (strings/blank? config-password) (System/getenv "JIRA_SLA_PASSWORD") config-password)
+          password (if (strings/blank? config-password) (System/getenv "COSLA_PASSWORD") config-password)
           login-url (str jira-url "/rest/auth/1/session")
           session (cookie-store)
           response (http/post login-url {:content-type :json

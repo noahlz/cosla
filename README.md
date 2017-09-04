@@ -29,7 +29,7 @@ Finally, your Jira instance must support the Jira REST API, and you must have a 
 
 ## Usage
 
-1. Inspect the example configuration file, `example.config.edn`. At a minimum, you'll need to edit your username, password and the JQL (Jira Query Language) clause to match you desired project. NOTE: You can export your password the environment variable `JIRA_SLA_PASSWORD`. Cosla will detect and use that if present.
+1. Inspect the example configuration file, `example.config.edn`. At a minimum, you'll need to edit your username, password and the JQL (Jira Query Language) clause to match you desired project. NOTE: You can export your password the environment variable `COSLA_PASSWORD`. Cosla will detect and use that if present.
 
 2. Run one of the reports with:
 
