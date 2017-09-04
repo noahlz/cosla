@@ -8,14 +8,14 @@ Calculate SLA metrics from your JIRA project.
 
 Cosla is a command-line tool that extracts data into CSV reports from Jira tickets via [Jira REST API](https://developer.atlassian.com/jiradev/jira-apis/jira-rest-apis).
 
-Example Reports:
+Example reports:
 
-- **Time to Close** The length of time (in business days) it took for each Jira ticket to reach "closed" state.
-- **Open Per Day** Number of Jira tickets open on each calendar day.
+- **Time to Close** The length of time (in business day hours) it took for each Jira ticket to reach "closed" state.
+- **Open Per Day** Number of Jira tickets still open at close-of-business each day (ending 6 PM local time).
 - **Time in Status** For each ticket, report the time it has spent in each of its statuses.
 - **Audit Statues** (No CSV, console output only) For the configured JQL, print the statuses used by all matching tickets.
 
-For all the CSV reports, Cosla defines "Closed" using ticket "Status" rather than "Resolution."  For example, if you decide that Jira tickets are "closed" when they reach the "Awaiting Approval" status (i.e. your developers submit a ticket for stakeholder approval), you can reflect that in your Cosla Reports. This is expecially useful for workflows (such as Jira's default workflow) where an issue is not actually closed when it is "Resolved."
+For all the CSV reports, Cosla defines "Closed" using ticket "Status" rather than "Resolution."  For example, if you decide that Jira tickets are "closed" when they reach the "Awaiting Approval" status (i.e. your developers submit a ticket for stakeholder approval), you can reflect that in your Cosla reports. This is expecially useful for workflows (such as Jira's default workflow) where an issue is not actually closed when it is "Resolved."
 
 Cosla supports a holiday calendar (via configuration) so that weekends and holidays don't count towards a Jira tickets resolution time.
 
