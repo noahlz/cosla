@@ -1,0 +1,15 @@
+/target
+/classes
+/checkouts
+pom.xml
+pom.xml.asc
+*.jar
+*.class
+/.lein-*
+/.nrepl-port
+config.edn
+*.csv
+*.xls
+*.xlsx
+.~lock.*
+tags

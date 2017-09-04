@@ -1,0 +1,14 @@
+<configuration scan="true" debug="false">
+
+   <appender name="STDOUT" class="ch.qos.logback.core.ConsoleAppender">
+    <encoder>
+      <pattern>%d{HH:mm:ss.SSS} %gray([%thread]) %highlight(%-4level) %cyan(%logger{36}): %msg%n%rEx</pattern>
+    </encoder>
+  </appender>
+
+  <logger name="cosla" level="INFO"/>
+
+  <root level="ERROR">
+    <appender-ref ref="STDOUT"/>
+  </root>
+</configuration>
