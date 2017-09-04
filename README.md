@@ -25,11 +25,11 @@ To build, you need to install Java and [Leiningen](https://leiningen.org/)
 
 If you have a pre-built jar already, you only need Java to run with `java -jar` - no need for Leiningen. See below for instructions.
 
-Finally, your Jira instance must support the Jira REST API, and you must have a login.
+Finally, your Jira instance must support the Jira REST API, and you must have a login (NOTE: You can export your password the environment variable `COSLA_PASSWORD`. Cosla will detect and use that if present).
 
 ## Usage
 
-1. Inspect the example configuration file, `example.config.edn`. At a minimum, you'll need to edit your username, password and the JQL (Jira Query Language) clause to match you desired project. NOTE: You can export your password the environment variable `COSLA_PASSWORD`. Cosla will detect and use that if present.
+1. Copy the example conifguration `example.config.edn` to a new file named `config.edn`, and edit it to your needs. At a minimum, you'll need to add your username, password and the JQL (Jira Query Language) clause to match your target project.
 
 2. Run one of the reports with:
 
@@ -49,6 +49,10 @@ and then run with
 Inspect the source code, or run Closa without arguments to view options:
 
     $ lein run -m cosla.main
+
+## Configuration Format
+
+Cosla uses edn configuration. See: https://github.com/edn-format/edn
 
 ## Acknowledgements
 
