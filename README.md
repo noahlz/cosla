@@ -4,16 +4,16 @@ Calculate SLA metrics from your JIRA project.
 
 ## Features
 
-Cosla is a command-line tool that extracts data into CSV reports from Jira tickets via Jira REST API.
+Cosla is a command-line tool that extracts data into CSV reports from Jira tickets via [Jira REST API](https://developer.atlassian.com/jiradev/jira-apis/jira-rest-apis).
 
 Example Reports:
 
-- *Time to Close* The length of time (in business days) it took for each Jira ticket to reach "closed" state.
-- *Open Per Day* Number of Jira tickets open on each calendar day.
-- *Time in Status* For each ticket, report the time it has spent in each of its statuses.
-- *Audit Statues* (No CSV, console output only) For the configured JQL, print the statuses used by all matching tickets.
+- **Time to Close** The length of time (in business days) it took for each Jira ticket to reach "closed" state.
+- **Open Per Day** Number of Jira tickets open on each calendar day.
+- **Time in Status** For each ticket, report the time it has spent in each of its statuses.
+- **Audit Statues** (No CSV, console output only) For the configured JQL, print the statuses used by all matching tickets.
 
-For all the CSV reports, Cosla defines "Closed" using ticket "Status" rather than "Resolution."  For example, if you decide that Jira tickets are "closed" when they reach the "Awaiting Approval" status (i.e. your deveopers submit a ticket for stakeholder approval), you can reflect that in your Cosla Reports. This is expecially useful for workflows (such as Jira's default workflow) where an issue is not actually closed when it is "Resolved."
+For all the CSV reports, Cosla defines "Closed" using ticket "Status" rather than "Resolution."  For example, if you decide that Jira tickets are "closed" when they reach the "Awaiting Approval" status (i.e. your developers submit a ticket for stakeholder approval), you can reflect that in your Cosla Reports. This is expecially useful for workflows (such as Jira's default workflow) where an issue is not actually closed when it is "Resolved."
 
 Cosla supports a holiday calendar (via configuration) so that weekends and holidays don't count towards a Jira tickets resolution time.
 
@@ -25,7 +25,7 @@ To build, you need to install Java and Lieningen:
 
 If you have a pre-built jar already, you only need Java to run with `java -jar` - no need for Leiningen. See below for instructions.
 
-Finally, your Jira instance must supprt the [Jira REST API](https://developer.atlassian.com/jiradev/jira-apis/jira-rest-apis), and you must have a login.
+Finally, your Jira instance must support the Jira REST API, and you must have a login.
 
 ## Usage
 
@@ -33,11 +33,11 @@ Finally, your Jira instance must supprt the [Jira REST API](https://developer.at
 
 2. Run one of the reports with:
 
-    $ lein run -m cosla.main <report-name>
+        $ lein run -m cosla.main <report-name>
 
 3. You can also compile to an uberjar (all dependencies included) with:
 
-    $ lein uberjar
+        $ lein uberjar
 
 and then run with
 
@@ -63,7 +63,7 @@ Cosla was developed in vim using Tim Pope's [vim-fireplace](https://github.com/t
 
 ## COPYRIGHT AND LICENSE
 
-This application was developed by Noah Zucker (@noahlz) at Novus Parters, and copywrite of code prior to September 2017 belongs to Novus Partners. Subsequent contributions belong to their respective authors.
+This application was developed by Noah Zucker (@noahlz) at Novus Parters, and copywrite of code prior to 1 September 2017 belongs to Novus Partners. Subsequent contributions belong to their respective authors.
 
 Copyright © [Novus Partners, Inc.](https://www.novus.com)
 
