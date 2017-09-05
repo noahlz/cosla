@@ -1,6 +1,6 @@
 # Cosla
 
-Calculate SLA metrics from your JIRA project.
+Get SLA metrics from your JIRA project.
 
     $ lein run -m cosla.main time-to-close
 
@@ -67,8 +67,9 @@ Cosla was developed in vim using Tim Pope's [vim-fireplace](https://github.com/t
 
 ## COPYRIGHT AND LICENSE
 
-This application was developed by Noah Zucker (@noahlz) at Novus Parters, and copywrite of code prior to 1 September 2017 belongs to Novus Partners. Subsequent contributions belong to their respective authors.
-
-Copyright © [Novus Partners, Inc.](https://www.novus.com)
-
 Distributed under the Eclipse Public License (1.0). See LICENSE file.
+
+Contributions prior to 1 Sept 2017: Copyright © [Novus Partners, Inc.](https://www.novus.com)
+
+Contributions 2 Sept 2017 and following: Copyright held by their respective authors, per GitHub revision history.
+
