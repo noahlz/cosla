@@ -23,13 +23,14 @@
     (binding [*config* config]
       (jira-connect)))
   ([]
-    (let [{:keys [jira-url username config-password]} *config*
-          password (if (strings/blank? config-password) (System/getenv "COSLA_PASSWORD") config-password)
+    (let [{:keys [jira-url username password user-agent]} *config*
+          config-password (if (strings/blank? password) (System/getenv "COSLA_PASSWORD") password)
           login-url (str jira-url "/rest/auth/1/session")
           session (cookie-store)
           response (http/post login-url {:content-type :json
                                          :cookie-store session
-                                         :form-params {:username username :password password}})]
+                                         :headers { "User-Agent" user-agent "X-Atlassian-Token" "no-check" }
+                                         :form-params {:username username :password config-password}})]
       (info "Connected to JIRA as" username)
       (debug "Response:" response)
       session)))

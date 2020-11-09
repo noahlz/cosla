@@ -4,6 +4,7 @@
   :jira-url "https://jira.yourcompany.com"
   :username "your-username"
   :password ""
+  :user-agent "cosla"
 
   ;; Search Jira Query to fetch issues. Max results is 1000, but
   ;; you may want to set it lower when testing new queries.
